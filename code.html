@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crypto Wallet Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; 
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #222;
+        }
+        header {
+            background-color: #141414;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        header .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        header .title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .balance-container {
+            background-color: white;
+            margin: 20px auto;
+            max-width: 400px;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .balance-container h2 {
+            margin: 0;
+            color: #888;
+            font-weight: 400;
+        }
+        .balance {
+            font-size: 36px;
+            margin: 10px 0 0 0;
+            font-weight: 700;
+            color: #008760;
+        }
+        .quick-actions {
+            max-width: 400px;
+            background: white;
+            margin: 10px auto;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .action {
+            width: 80px;
+            margin: 10px 5px;
+            text-align: center;
+            cursor: pointer;
+            color: #333;
+        }
+        .action-icon {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #008760;
+        }
+        .action-label {
+            font-size: 13px;
+        }
+        .transaction-list {
+            max-width: 400px;
+            margin: 20px auto 60px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px;
+        }
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .transaction-item:last-child {
+            border-bottom: none;
+        }
+        .transaction-status {
+            font-weight: 600;
+            color: #008760;
+        }
+        nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        nav .nav-item {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            cursor: pointer;
+        }
+        nav .nav-icon {
+            font-size: 20px;
+            margin-bottom: 3px;
+            color: #008760;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-icon">&#9776;</div>
+        <div class="title">Total Balance (USD)</div>
+        <div class="notification-icon">&#128276;</div>
+    </header>
+
+    <section class="balance-container">
+        <h2>$</h2>
+        <div class="balance">4,512.00</div>
+    </section>
+
+    <section class="quick-actions">
+        <div class="action" title="Deposit">
+            <div class="action-icon">&#x1F4B0;</div>
+            <div class="action-label">Deposit</div>
+        </div>
+        <div class="action" title="Withdraw">
+            <div class="action-icon">&#x1F4B5;</div>
+            <div class="action-label">Withdraw</div>
+        </div>
+        <div class="action" title="Transfer">
+            <div class="action-icon">&#x1F4E4;</div>
+            <div class="action-label">Transfer</div>
+        </div>
+        <div class="action" title="Buy Crypto">
+            <div class="action-icon">&#x1F4B8;</div>
+            <div class="action-label">Buy</div>
+        </div>
+        <div class="action" title="Sell Crypto">
+            <div class="action-icon">&#x1F4B9;</div>
+            <div class="action-label">Sell</div>
+        </div>
+        <div class="action" title="Exchange">
+            <div class="action-icon">&#x21C4;</div>
+            <div class="action-label">Exchange</div>
+        </div>
+    </section>
+
+    <section class="transaction-list">
+        <h3>Recent Transactions</h3>
+        <div class="transaction-item">
+            <div>BTC Deposit</div>
+            <div class="transaction-status">Completed</div>
+            <div>0.004 BTC</div>
+        </div>
+        <div class="transaction-item">
+            <div>ETH Withdraw</div>
+            <div class="transaction-status">Pending</div>
+            <div>0.1 ETH</div>
+        </div>
+        <div class="transaction-item">
+            <div>USDT Transfer</div>
+            <div class="transaction-status">Completed</div>
+            <div>200 USDT</div>
+        </div>
+    </section>
+
+    <nav>
+        <div class="nav-item">
+            <div class="nav-icon">&#8962;</div>
+            Home
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">&#128179;</div>
+            Wallet
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">&#128200;</div>
+            Markets
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">&#9881;</div>
+            Settings
+        </div>
+    </nav>
+</body>
+</html>
